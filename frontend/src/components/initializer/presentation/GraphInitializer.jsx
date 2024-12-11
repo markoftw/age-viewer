@@ -91,7 +91,7 @@ const InitGraphModal = ({ show, setShow }) => {
       mode: 'cors',
 
     };
-    fetch('/api/v1/cypher/init', reqData)
+    fetch('https://age-viewer-production.up.railway.ap/api/v1/cypher/init', reqData)
       .then(async (res) => {
         setLoading(false);
 

@@ -56,7 +56,7 @@ const DefaultTemplate = ({
     const req = {
       method: 'GET',
     };
-    const res = await fetch('/api/v1/miscellaneous', req);
+    const res = await fetch('https://age-viewer-production.up.railway.ap/api/v1/miscellaneous', req);
     const results = await res.json();
     const kwFinder = KeyWordFinder.fromMatrix(results);
     setFinder(kwFinder);

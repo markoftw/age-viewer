@@ -31,7 +31,7 @@ const CSV = ({
 
   const props = {
     name: 'file',
-    action: '/api/v1/feature/uploadCSV',
+    action: 'https://age-viewer-production.up.railway.ap/api/v1/feature/uploadCSV',
     headers: {
       authorization: 'authorization-text',
     },
