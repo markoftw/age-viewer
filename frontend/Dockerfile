@@ -1,4 +1,4 @@
-FROM node:14-alpine3.16
+FROM node:14-alpine3.16 AS build
 
 RUN npm install pm2
 
@@ -8,6 +8,10 @@ COPY . .
 
 RUN npm install
 
-CMD ["npm", "run", "start"]
+RUN npm run build
 
-EXPOSE 3001
+FROM nginx:alpine AS runner
+
+COPY --from=build /src/build /usr/share/nginx/html
+
+EXPOSE 80
