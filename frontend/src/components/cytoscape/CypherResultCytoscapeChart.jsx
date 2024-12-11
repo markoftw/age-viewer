@@ -208,7 +208,7 @@ const CypherResultCytoscapeCharts = ({
                 }
               }, 1000);
 
-              fetch('https://age-viewer-production.up.railway.ap/api/v1/cypher', {
+              fetch('https://age-viewer-production.up.railway.app/api/v1/cypher', {
                 method: 'POST',
                 headers: {
                   Accept: 'application/json',

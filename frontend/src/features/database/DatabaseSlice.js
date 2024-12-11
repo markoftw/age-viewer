@@ -23,7 +23,7 @@ export const connectToDatabase = createAsyncThunk(
   'database/connectToDatabase',
   async (formData) => {
     try {
-      const response = await fetch('https://age-viewer-production.up.railway.ap/api/v1/db/connect',
+      const response = await fetch('https://age-viewer-production.up.railway.app/api/v1/db/connect',
         {
           method: 'POST',
           headers: {
@@ -49,7 +49,7 @@ export const connectToDatabase = createAsyncThunk(
 export const disconnectToDatabase = createAsyncThunk(
   'database/disconnectToDatabase',
   async () => {
-    await fetch('https://age-viewer-production.up.railway.ap/api/v1/db/disconnect');
+    await fetch('https://age-viewer-production.up.railway.app/api/v1/db/disconnect');
   },
 );
 
@@ -57,7 +57,7 @@ export const getConnectionStatus = createAsyncThunk(
   'database/getConnectionStatus',
   async () => {
     try {
-      const response = await fetch('https://age-viewer-production.up.railway.ap/api/v1/db');
+      const response = await fetch('https://age-viewer-production.up.railway.app/api/v1/db');
       if (response.ok) { return await response.json(); }
       throw response;
     } catch (error) {

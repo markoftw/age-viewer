@@ -24,7 +24,7 @@ export const getMetaData = createAsyncThunk(
   'database/getMetaData',
   async (arg) => {
     try {
-      const response = await fetch('https://age-viewer-production.up.railway.ap/api/v1/db/meta',
+      const response = await fetch('https://age-viewer-production.up.railway.app/api/v1/db/meta',
         {
           method: 'POST',
           headers: {
@@ -67,7 +67,7 @@ export const getMetaChartData = createAsyncThunk(
   'database/getMetaChartData',
   async () => {
     try {
-      const response = await fetch('https://age-viewer-production.up.railway.ap/api/v1/db/metaChart');
+      const response = await fetch('https://age-viewer-production.up.railway.app/api/v1/db/metaChart');
       if (response.ok) {
         return await response.json();
       }

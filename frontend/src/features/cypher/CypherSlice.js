@@ -50,7 +50,7 @@ export const executeCypherQuery = createAsyncThunk(
   'cypher/executeCypherQuery',
   async (args, thunkAPI) => {
     try {
-      const response = await fetch('https://age-viewer-production.up.railway.ap/api/v1/cypher',
+      const response = await fetch('https://age-viewer-production.up.railway.app/api/v1/cypher',
         {
           method: 'POST',
           headers: {
