@@ -8,6 +8,6 @@ COPY . .
 
 RUN npm run setup
 
-# CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start"]
 
 EXPOSE 3000
